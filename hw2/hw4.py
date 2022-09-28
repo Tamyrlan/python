@@ -16,4 +16,4 @@ position2 = int(input('Enter second position of elem:'))
 position_one = numbers[position1-1]
 position_two = numbers[position2 - 1]
 summ = position_one+position_two
-print(summ)
+print(f"The summ of numbers in those positions = {summ}")
