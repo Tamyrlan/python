@@ -2,14 +2,13 @@
 # 10
 # -> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 # -> [0, 7, 6, 3, 4, 2, 9, 5, 1, 8]
-
-import random
+from random import randrange
 num = int(input())
 numbers = list(range(num))
+size = len(numbers)
 print(numbers)
-for i in numbers:
-    j = random.randrange(len(numbers))
-    k = random.randrange(len(numbers))
-    numbers[i] = j
-    numbers[i-1] = k
+for i in range(size):
+    j = randrange(len(numbers))
+    k = randrange(len(numbers))
+    numbers[j],numbers[k] = numbers[k], numbers[j]
 print(numbers)
