@@ -13,7 +13,7 @@ for i in range(-num, num+1):
 print(numbers)
 position1 = int(input('Enter first position of elem:'))
 position2 = int(input('Enter second position of elem:'))
-if position1 < len(numbers) and position2 < len(numbers):
+if 0 <= position1 <= len(numbers) and 0 <= position2 <= len(numbers):
     position_one = numbers[position1-1]
     position_two = numbers[position2 - 1]
     summ = position_one+position_two
