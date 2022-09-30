@@ -8,8 +8,8 @@ num = int(input())
 numbers = list(range(num))
 print(numbers)
 for i in numbers:
-    j = random.randrange(numbers[0],len(numbers))
-    numbers[i] = numbers[j]
-    k = random.randrange(numbers[0],len(numbers))
-    numbers[i-1] = numbers[k]
+    j = random.randrange(len(numbers))
+    k = random.randrange(len(numbers))
+    numbers[i] = j
+    numbers[i-1] = k
 print(numbers)
