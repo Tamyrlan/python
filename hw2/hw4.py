@@ -13,7 +13,10 @@ for i in range(-num, num+1):
 print(numbers)
 position1 = int(input('Enter first position of elem:'))
 position2 = int(input('Enter second position of elem:'))
-position_one = numbers[position1-1]
-position_two = numbers[position2 - 1]
-summ = position_one+position_two
-print(f"The summ of numbers in those positions = {summ}")
+if position1 < len(numbers) and position2 < len(numbers):
+    position_one = numbers[position1-1]
+    position_two = numbers[position2 - 1]
+    summ = position_one+position_two
+    print(f"The summ of numbers in those positions = {summ}")
+else:
+    print('Wrong number')
