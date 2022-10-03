@@ -23,9 +23,15 @@ def list_of_numbers(size):
     my_list = sample(range(1, size*2), size)
     print(my_list)
     mult = []
-    for i in range(int(len(my_list)/2)):
-        multi = my_list[i]*my_list[i-1]
-        mult.append(multi)
+    if size%2==0:
+        for i in range(int(size/2)):
+            multi = my_list[i]*my_list[-1-i]
+            mult.append(multi)
+    elif size%2!=0:
+          for i in range(int(size/2)):
+            multi = my_list[i]*my_list[-1-i]
+            mult.append(multi)      
+          mult.append(my_list[int(size/2)])
     return mult
 
 
