@@ -24,11 +24,11 @@ def list_of_numbers(size):
     print(my_list)
     mult = []
     # if size%2==0:
-    for i in range(int(size/2)):
+    for i in range(size//2):
         multi = my_list[i]*my_list[-1-i]
         mult.append(multi)
     if size%2!=0:
-        mult.append(my_list[int(len(my_list)/2)])
+        mult.append(my_list[len(my_list)//2])
     else:
         return mult
 
