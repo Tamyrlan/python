@@ -18,20 +18,25 @@ from random import sample
 
 def list_of_numbers(size):
     my_list = []
-    if size < 0:
+    if size <= 0:
         return "Wrong number"
     my_list = sample(range(1, size*2), size)
     print(my_list)
     mult = []
-    if size%2==0:
-        for i in range(int(size/2)):
-            multi = my_list[i]*my_list[-1-i]
-            mult.append(multi)
-    elif size%2!=0:
-          for i in range(int(size/2)):
-            multi = my_list[i]*my_list[-1-i]
-            mult.append(multi)      
-          mult.append(my_list[int(size/2)])
+    # if size%2==0:
+    for i in range(int(size/2)):
+        multi = my_list[i]*my_list[-1-i]
+        mult.append(multi)
+    if size%2!=0:
+        mult.append(my_list[int(len(my_list)/2)])
+    else:
+        return mult
+
+    # elif size%2!=0:
+        #   for i in range(int(size/2)):
+        #     multi = my_list[i]*my_list[-1-i]
+        #     mult.append(multi)      
+        #   mult.append(my_list[int(size/2)])
     return mult
 
 
