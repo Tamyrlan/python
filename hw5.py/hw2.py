@@ -22,10 +22,11 @@
 # 5a29v4s3D3d2F4g2O3i2a1
 # 1v2b2w2P3u2T1Y1y2W2Q
 
+## Честно скажу что не разобрался до конца по этой работе, прибегнул к гуглу и подсмотрел .
 from itertools import groupby, starmap
 from os import path
 
-def rle_encode(text = "text_words.txt",coded_text = "text_code_words.txt"):
+def encode(text = "text_words.txt",coded_text = "text_code_words.txt"):
     if path.exists(text) and not path.exists(coded_text):
         with open(text) as my_file,\
                 open(coded_text,"a") as my_file2:
@@ -35,7 +36,7 @@ def rle_encode(text = "text_words.txt",coded_text = "text_code_words.txt"):
         print('The files do not exist')
     
 
-def rle_decode(name):
+def decode(name):
     if path.exists(name):
         with open(name) as my_f:
             n=""
@@ -51,5 +52,5 @@ def rle_decode(name):
     else:
         print("The files do not exist")
 
-rle_encode(input('Enter the name of the file with the text:'), input("Enter the file name to record:"))
-rle_decode(input('Enter the name of the file to decode:'))
+encode(input('Enter the name of the file with the text:'), input("Enter the file name to record:"))
+decode(input('Enter the name of the file to decode:'))
